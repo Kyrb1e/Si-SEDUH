@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5eee2">
+<meta name="description" content="Si SEDUH: resep minuman kopi dan teh, Barista Lab untuk melatih kalibrasi espresso, dan Cafe Finder untuk kafe di Bandung dan sekitar ITB Jatinangor.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Si SEDUH">
+<meta property="og:title" content="Si SEDUH">
+<meta property="og:description" content="Belajar meracik minuman, melatih kalibrasi espresso, dan mencari kafe di Bandung.">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Si SEDUH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link id="app-css" rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="scene" data-t="mix" aria-hidden="true"><i data-t="mix"></i><i data-t="kopi"></i><i data-t="coklat"></i><i data-t="teh"></i><canvas></canvas></div>
+<div class="sbar" id="sbar"><div class="wrap in"><a class="sbrand hdx" href="#/hub" data-home="hub" aria-label="Si SEDUH, kembali ke Beranda" title="Ke Beranda"><span class="lg"><span class="gcs" aria-hidden="true"></span><span class="stm" aria-hidden="true"><i></i><i></i><i></i></span></span><span class="brand"><b>Si SEDUH</b><small class="slg" id="slg">Seduh, tarik, tos, lanjut!</small></span></a><a href="#/hub" data-v="hub">Beranda</a><a href="#/bahan" data-v="resep">Resep</a><a href="#/lab" data-v="lab">Barista Lab</a><a href="#/cafe" data-v="cafe">Cafe Finder</a><a href="#/beverage" data-v="beverage">Beverage</a><button type="button" class="mp-mini" id="mpMini" aria-label="Putar atau jeda musik"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span id="mpMiniT">Musik</span></button></div></div>
+
+<section class="sv splash" id="sv-splash"><div>
+  <span class="gcs" role="img" aria-label="Logo GCS"></span>
+  <h1>Si SEDUH</h1>
+  <p>Sistem Informasi Seputar Edukasi Dunia Hobi GCS. Belajar meracik minuman, melatih kalibrasi espresso, dan mencari kafe di sekitar ITB.</p>
+  <a class="btn accent" href="#/hub" data-v="hub">Masuk ▶</a>
+  <small>Ganesha Caffeine Society</small>
+</div></section>
+
+<section class="sv" id="sv-hub"><div class="wrap hb">
+  <h1 class="page-title rv" style="--i:0">Mau ngapain<br>hari ini?</h1>
+  <p class="lead rv" style="--i:1">Empat alat dalam satu aplikasi. Pilih salah satu untuk mulai.</p>
+  <section class="mp rv" id="mp" style="--i:2" aria-labelledby="mpT">
+  <div class="mp-deck" aria-hidden="true"><div class="mp-disc"><span class="mp-lab"><span class="gcs"></span></span></div><i class="mp-arm"></i></div>
+  <div class="mp-body"><h2 id="mpT">Musik ngopi</h2><p id="mpNow" aria-live="polite"></p>
+    <div class="mp-row"><button type="button" class="mp-play" id="mpPlay" aria-pressed="false" aria-label="Putar musik">▶</button>
+      <label class="mp-sel"><span>Pilih lagu</span><select id="mpSel"></select></label>
+      <label class="mp-vol"><span>Volume</span><input type="range" id="mpVol" min="0" max="100" value="80"></label></div></div>
+  <div class="mp-eq" id="mpEq" aria-hidden="true"></div>
+</section>
+  <div class="hb-menu">
+    <a class="hb-tile rv" style="--i:2;--t:var(--coklat-tint)" href="#/bahan" data-v="resep"><span class="ic al"><svg viewBox="0 0 64 64" aria-hidden="true"><g class="bob"><path class="straw" d="M39 5 L33 22" stroke="#e2603f" stroke-width="4.2" stroke-linecap="round" fill="none"/><path d="M14 20H50L45.2 55Q44.6 58 41.5 58H22.5Q19.4 58 18.8 55Z" fill="#fff8ee" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M16.2 27H47.8L44.8 52H19.2Z" fill="#d9a877"/><path d="M11.5 19.5H52.5" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" fill="none"/><circle class="bb" cx="25" cy="50" r="2.7" fill="#3a2418"/><circle class="bb d1" cx="32" cy="51" r="2.7" fill="#3a2418"/><circle class="bb d2" cx="39" cy="50" r="2.7" fill="#3a2418"/><ellipse class="ey " cx="26" cy="36" rx="2" ry="2.8" fill="#2b1b12"/><ellipse class="ey b" cx="38" cy="36" rx="2" ry="2.8" fill="#2b1b12"/><path d="M29 41Q32 44.5 35 41" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2.2"/><circle cx="22.5" cy="41" r="2.4" fill="#f4a496" opacity=".85"/><circle cx="41.5" cy="41" r="2.4" fill="#f4a496" opacity=".85"/></g></svg></span><h2>Resep Minuman</h2><p>Pilih kopi, cokelat, atau teh, catat alat dan bahan yang kamu punya, lalu ikuti panduan membuat tiap menu langkah demi langkah.</p><span class="go">Lihat resep →</span></a>
+    <a class="hb-tile rv" style="--i:3;--t:var(--kopi-tint)" href="#/lab" data-v="lab"><span class="ic al"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="sm" d="M24 17q-4-4 0-8" stroke="#b79a7e" stroke-width="2.6" fill="none" stroke-linecap="round"/><path class="sm d1" d="M32 16q-4-4 0-8" stroke="#b79a7e" stroke-width="2.6" fill="none" stroke-linecap="round"/><path class="sm d2" d="M40 17q-4-4 0-8" stroke="#b79a7e" stroke-width="2.6" fill="none" stroke-linecap="round"/><path class="tw" d="M54 8l1.6 4.4L60 14l-4.4 1.6L54 20l-1.6-4.4L48 14l4.4-1.6Z" fill="#e9b95f"/><g class="bob"><ellipse cx="32" cy="54" rx="23" ry="5" fill="#e8d5bf" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 30Q61 29 58 40Q56 45 47 44" fill="none" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M13 26H51Q51 47 32 49Q13 47 13 26Z" fill="#fff8ee" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="32" cy="26" rx="19" ry="4.5" fill="#8a4a1c" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><ellipse class="ey " cx="25" cy="36" rx="2" ry="2.8" fill="#2b1b12"/><ellipse class="ey b" cx="39" cy="36" rx="2" ry="2.8" fill="#2b1b12"/><path d="M29 41Q32 44.5 35 41" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2.2"/><circle cx="21.5" cy="40.5" r="2.4" fill="#f4a496" opacity=".85"/><circle cx="42.5" cy="40.5" r="2.4" fill="#f4a496" opacity=".85"/></g></svg></span><h2>Barista Lab</h2><p>Game kalibrasi espresso: pilih beans, mesin, dan grinder, lalu hentikan shot di yield yang pas. Kumpulkan XP dan naik rank.</p><span class="go">Mulai latihan →</span></a>
+    <a class="hb-tile rv" style="--i:4;--t:var(--teh-tint)" href="#/cafe" data-v="cafe"><span class="ic al"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse class="rg" cx="32" cy="58" rx="9" ry="2.6" fill="none" stroke="#5f8040" stroke-width="2"/><ellipse class="sh" cx="32" cy="58" rx="9" ry="2.6" fill="#2b1b12" opacity=".2"/><g class="pin"><path d="M32 5C20 5 12.5 14 12.5 24.5C12.5 38 32 55 32 55C32 55 51.5 38 51.5 24.5C51.5 14 44 5 32 5Z" fill="#86ad58" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M20 15Q24 9 31 8" stroke="#c4dc9b" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse class="ey " cx="25.5" cy="24" rx="2" ry="2.8" fill="#2b1b12"/><ellipse class="ey b" cx="38.5" cy="24" rx="2" ry="2.8" fill="#2b1b12"/><path d="M28.5 30Q32 34 35.5 30" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2.2"/><circle cx="21.5" cy="29.5" r="2.4" fill="#f4a496" opacity=".85"/><circle cx="42.5" cy="29.5" r="2.4" fill="#f4a496" opacity=".85"/></g></svg></span><h2>Cafe Finder</h2><p>Cari kafe di sekitar ITB Ganesha dan Jatinangor berdasarkan fasilitas, jam buka, menu, dan kebutuhanmu, atau biarkan kami memilihkan.</p><span class="go">Cari kafe →</span></a>
+    <a class="hb-tile rv" style="--i:5;--t:var(--bev-tint)" href="#/beverage" data-v="beverage"><span class="ic al"><svg viewBox="0 0 64 64" aria-hidden="true"><path class="tw" d="M54 6l1.6 4.4L60 12l-4.4 1.6L54 18l-1.6-4.4L48 12l4.4-1.6Z" fill="#e9b95f"/><g class="bob"><rect x="25" y="4" width="14" height="7" rx="2.5" fill="#e2603f" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round"/><path d="M27 11H37V18Q37 21 43 25Q47 28 47 33V53Q47 58 42 58H22Q17 58 17 53V33Q17 28 21 25Q27 21 27 18Z" fill="#fff8ee" stroke="#2b1b12" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M19.2 34H44.8V53Q44.8 55.8 42 55.8H22Q19.2 55.8 19.2 53Z" fill="#8cc4ea"/><path d="M22.5 37V44" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".7"/><circle class="bb d1" cx="39.5" cy="38.5" r="1.6" fill="#fff" opacity=".85"/><ellipse class="ey " cx="26" cy="43" rx="2" ry="2.8" fill="#2b1b12"/><ellipse class="ey b" cx="38" cy="43" rx="2" ry="2.8" fill="#2b1b12"/><path d="M29 47.5Q32 51 35 47.5" stroke="#2b1b12" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" fill="none"/><circle cx="22.5" cy="47.5" r="2.4" fill="#f4a496" opacity=".85"/><circle cx="41.5" cy="47.5" r="2.4" fill="#f4a496" opacity=".85"/></g></svg></span><h2>Beverage</h2><p>Bacaan seputar minuman: sejarah, asal-usul, dan fakta menarik tentang kopi, cokelat, dan teh.</p><span class="go">Mulai membaca →</span></a>
+  </div>
+  
+  <div class="hb-stats" id="hbStats"></div>
+</div></section>
+
+<section class="sv" id="sv-lab"></section>
+
+<section class="sv" id="sv-beverage"></section>
+
+<section class="sv" id="sv-login"><div class="wrap lg">
+  <div>
+    <h1 class="page-title">Masuk ke<br>Si SEDUH</h1>
+    <p class="lead">Akun menyimpan progresmu dan menyamakannya di semua perangkat.</p>
+    <ul class="lg-points">
+      <li>Resep favorit dan resep buatanmu</li>
+      <li>Level dan skor terbaik di Barista Lab</li>
+      <li>Pengaturan musik dan suara</li>
+    </ul>
+    <a class="lg-skip" href="#/hub">Lanjut tanpa akun</a>
+  </div>
+  <div class="lg-card">
+    <div id="lgOut">
+      <h2>Selamat datang</h2>
+      <p>Pilih cara masuk yang paling mudah buatmu.</p>
+      <div class="lg-tabs" role="tablist" aria-label="Masuk atau daftar">
+        <button type="button" role="tab" id="tabIn" aria-selected="true">Masuk</button>
+        <button type="button" role="tab" id="tabUp" aria-selected="false">Daftar</button>
+      </div>
+      <button type="button" class="lg-g" id="gBtn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.5 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.4 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.4a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.4 6.6l4 3.1C6.3 6.9 8.9 4.8 12 4.8z"/></svg>Lanjut dengan Google</button>
+      <div class="lg-or">atau pakai email</div>
+      <form id="lgForm" novalidate>
+        <label for="em">Email</label>
+        <input id="em" type="email" autocomplete="email" inputmode="email" placeholder="nama@email.com">
+        <label for="pw">Kata sandi</label>
+        <input id="pw" type="password" autocomplete="current-password" placeholder="Minimal 6 karakter">
+        <button type="submit" class="lg-go" id="goBtn">Masuk</button>
+      </form>
+      <button type="button" class="lg-lnk" id="rsBtn">Lupa kata sandi?</button>
+      <div class="lg-msg" id="acctMsg" role="alert"></div>
+      <p class="lg-note" id="lgCfg" hidden>Supabase belum dikonfigurasi. Isi <b>supabase-config.js</b> agar login aktif.</p>
+    </div>
+    <div id="lgIn" hidden>
+      <h2>Akunmu</h2>
+      <div class="lg-acct"><b id="lgName"></b><span id="lgMail"></span><span id="lgStat"></span></div>
+      <div class="lg-row"><button type="button" id="syncNow">Sinkronkan sekarang</button><button type="button" id="outBtn">Keluar</button></div>
+      <p style="margin-top:12px;font-size:12.5px">Saat keluar, data di perangkat ini dihapus agar tidak tercampur dengan akun lain. Datamu tetap aman di akun.</p>
+      <a class="lg-skip" href="#/hub">Kembali ke Beranda</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sv" id="sv-cafe">
+<header><div class="wrap bar"><a class="mlogo hdx" href="#/cafe" data-home="cafe" aria-label="Cafe Finder, kembali ke awal" title="Kembali ke awal"><span class="lg"><span class="gcs" role="img" aria-label="Logo GCS"></span><span class="stm" aria-hidden="true"><i></i><i></i><i></i></span></span><span class="brand"><b>Cafe Finder</b><small class="slg">Dari Gane sampai Nangor, ada kopimu.</small></span></a></div></header>
+<div class="wrap hb">
+  <h1 class="page-title rv" style="--i:0">Mau ngopi<br>di mana?</h1>
+  <p class="lead rv" style="--i:1">Kafe di Bandung (sekitar ITB Ganesha, Dago, Braga, dan kawasan lain) serta di sekitar ITB Jatinangor (Nangor). Jarak dihitung garis lurus ke kampus terdekat. Jam buka bisa berubah, jadi cek lagi sebelum berangkat. Daftar menu dan harga adalah acuan dari artikel media; harga bisa sudah berubah.</p>
+  <div class="cf-bar rv" style="--i:2">
+    <div class="cf-row"><input class="search" id="cfQ" type="search" placeholder="Cari kafe, daerah, atau menu (mis. matcha)" aria-label="Cari kafe"><select class="cf-sel" id="cfSort" aria-label="Urutkan"><option value="best">Terbaik</option><option value="rating">Rating tertinggi</option><option value="reviews">Ulasan terbanyak</option><option value="name">Nama A–Z</option><option value="near">Terdekat dari kampus</option></select><select class="cf-sel" id="cfDist" aria-label="Jarak maksimal dari kampus"><option value="">Semua jarak</option><option value="1">≤ 1 km</option><option value="2">≤ 2 km</option><option value="3">≤ 3 km</option><option value="5">≤ 5 km</option><option value="10">≤ 10 km</option></select><button class="cf-chip cf-filt" id="cfFiltBtn" type="button" aria-expanded="false" aria-controls="cfPanel">⚙ Filter <b class="cf-fn" id="cfFiltN" hidden></b></button></div>
+    <div class="cf-panel" id="cfPanel">
+    <div class="cf-row"><span class="cf-lbl">Area</span><span id="cfArea"></span></div>
+    <div class="cf-row"><span class="cf-lbl">Fasilitas</span><span id="cfFac"></span></div>
+    <div class="cf-row"><span class="cf-lbl">Cocok untuk</span><span id="cfUse"></span></div>
+    <div class="cf-row"><button class="cf-chip" id="cfNow">Buka sekarang</button><button class="cf-chip" id="cfMenuF">🍽️ Ada menu</button><button class="cf-chip" id="cfFavF">♥ Favorit <b id="cfFn">0</b></button><button class="cf-chip" id="cfImp">⬆ Impor Google Maps</button><button class="cf-chip" id="cfReset">Reset</button><button class="btn accent" id="cfRand" style="margin-left:auto">🎲 Acak kafe</button></div>
+    </div>
+  </div>
+  <p class="cf-count" id="cfCount"></p>
+  <div class="cf-grid" id="cfGrid"></div>
+  <div class="cf-more"><button class="btn ghost" id="cfMore" style="display:none">Muat lebih banyak</button> <button class="btn ghost" id="cfAll" style="display:none">Tampilkan semua</button></div>
+</div></section>
+
+<div class="sv" id="sv-resep">
+<header>
+  <div class="wrap bar">
+    <div class="hbox"><nav aria-label="Langkah"><ol class="stepper" id="stepper"></ol></nav><button type="button" class="snd" id="sndBtn"></button><button type="button" class="snd off" id="musBtn" hidden aria-pressed="false" aria-label="Putar musik latar" title="Musik latar"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></button></div>
+  </div>
+</header>
+
+<main class="wrap" id="app" tabindex="-1"></main>
+
+<footer class="site"><div class="wrap">
+  <div class="fbrand"><span class="gcs" role="img" aria-label="Logo GCS"></span><div><strong>Resep Minuman</strong><p>Pilih alat dan bahan yang kamu punya, lalu ikuti panduan langkah demi langkah.</p></div></div>
+  <div class="legend"><small>Penanda suhu di kartu menu</small><div><span class="tpill hot">Panas</span><span class="tpill cold">Dingin</span></div></div>
+</div></footer>
+</div>
+
+<dialog id="addDlg" aria-labelledby="addTitle">
+  <form class="modal" id="addForm">
+    <h2 id="addTitle">Tambah menu baru</h2>
+    <label class="f">Nama minuman
+      <input type="text" id="fName" maxlength="60" required placeholder="Contoh: Es Kopi Susu Gula Aren">
+    </label>
+    <div class="two">
+      <label class="f">Kategori
+        <select id="fBase"></select>
+      </label>
+      <label class="f">Disajikan
+        <select id="fType"><option value="iced">Dingin</option><option value="hot">Panas</option></select>
+      </label>
+    </div>
+    <label class="f" id="fSubWrap" style="display:none">Jenis teh
+      <select id="fSub"><option value="matcha">Matcha</option><option value="seduh">Teh seduh</option></select>
+    </label>
+    <label class="f">Deskripsi singkat
+      <textarea id="fDesc" maxlength="160" placeholder="Rasa atau ciri khas minuman ini"></textarea>
+    </label>
+    <label class="f">Sejarah singkat <small style="font-weight:400;color:var(--muted)">(opsional)</small>
+      <textarea id="fHist" maxlength="400" placeholder="Asal-usul atau cerita singkat minuman ini"></textarea>
+    </label>
+    <div class="two">
+      <label class="f">Tahun atau era
+        <input type="text" id="fHistY" maxlength="20" placeholder="Contoh: 1901">
+      </label>
+      <label class="f">Asal
+        <input type="text" id="fHistP" maxlength="40" placeholder="Contoh: Milan, Italia">
+      </label>
+    </div>
+    <label class="f">Fakta menarik <small style="font-weight:400;color:var(--muted)">(opsional)</small>
+      <input type="text" id="fFact" maxlength="160" placeholder="Satu fakta unik tentang minuman ini">
+    </label>
+    <label class="f">Bahan dan takaran
+      <textarea id="fIng" placeholder="Satu bahan per baris, misalnya:&#10;18 g kopi bubuk&#10;150 ml susu"></textarea>
+    </label>
+    <div class="f pickbox">
+      <span class="pl">Bahan yang perlu disiapkan</span>
+      <div class="pick" id="fIngPick"></div>
+      <div class="addrow"><input type="text" id="fNewIngr" maxlength="40" placeholder="Bahan lain, mis. Gula merah" aria-label="Nama bahan baru"><button type="button" class="btn ghost small" id="fAddIngr">Tambah bahan</button></div>
+    </div>
+    <label class="f">Cara membuat
+      <textarea id="fSteps" placeholder="Satu langkah per baris. Nomor dibuat otomatis, misalnya:&#10;Giling kopi halus&#10;Seduh selama 30 detik"></textarea>
+    </label>
+    <div class="f pickbox">
+      <span class="pl">Alat yang dibutuhkan</span>
+      <div class="pick" id="fNeeds"></div>
+      <div class="addrow"><input type="text" id="fNewGear" maxlength="40" placeholder="Alat lain, mis. Gelas ukur" aria-label="Nama alat baru"><button type="button" class="btn ghost small" id="fAddGear">Tambah alat</button></div>
+    </div>
+    <label class="f drop" for="fImg">
+      <span id="fImgPrev" style="font-size:28px">📷</span>
+      <span><strong style="font-weight:600">Pilih foto</strong><br><small style="color:var(--muted)">Opsional, JPG atau PNG</small></span>
+      <input type="file" id="fImg" accept="image/*">
+    </label>
+    <p class="err" id="fErr" role="alert"></p>
+    <div class="row-end">
+      <button type="button" class="btn ghost" id="fCancel">Batal</button>
+      <button type="submit" class="btn accent">Simpan menu</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="guideDlg" aria-labelledby="gTitle">
+  <button type="button" class="g-close" id="gClose" aria-label="Tutup panduan">✕</button>
+  <div id="guideContent" style="display:contents"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="cafe-data.js"></script>
+<script src="app.js"></script>
+<script src="beverage.js"></script>
+
+
+<!-- ===== Si SEDUH · Sinkronisasi akun (Supabase) ===== -->
+<button type="button" id="acctBtn" aria-haspopup="dialog"><i class="dot"></i><span class="t">Masuk</span></button>
+
+
+<div id="syncBar" role="status"><span>Data diperbarui dari perangkat lain.</span><button type="button" id="syncReload">Muat ulang</button><button type="button" id="syncLater">Nanti</button></div>
+<script type="module">
+/* Si SEDUH · akun & sinkronisasi (Supabase Auth + Postgres + Realtime).
+   SDK dimuat malas (lazy): pengunjung tanpa akun tidak mengunduhnya sama sekali. */
+const SB_SDK = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/+esm";
+
+/* Config dibaca dari supabase-config.js (satu folder dengan index.html).
+   Kalau file itu belum ada, aplikasi tetap jalan tanpa akun & sinkronisasi. */
+let cfg = { url: "ISI_URL", anonKey: "ISI_ANON_KEY" };
+try { const m = await import("./supabase-config.js"); if (m && m.supabaseConfig) cfg = m.supabaseConfig; } catch (e) { /* belum dikonfigurasi */ }
+
+const SKIP = [];
+const QUIET = ["seduh.on", "seduh.vol", "seduh.track", "seduh.mute", "seduh.music"];
+const MARK = "sdh.session";
+const PUSH_DELAY = 1500;
+const TABLE = "user_data";
+const IN_APP = /FBAN|FBAV|Instagram|Line\/|MicroMessenger|TikTok|; wv\)/i.test(navigator.userAgent);
+
+const S = window.SeduhSync;
+const $ = id => document.getElementById(id);
+const btn = $("acctBtn"), bar = $("syncBar");
+const configured = !!cfg.url && !!cfg.anonKey && !String(cfg.url).startsWith("ISI_") && !String(cfg.anonKey).startsWith("ISI_");
+const hasSession = () => { try { return localStorage.getItem(MARK) === "1"; } catch (e) { return false; } };
+const setSession = on => { try { on ? localStorage.setItem(MARK, "1") : localStorage.removeItem(MARK); } catch (e) {} };
+
+let sb = null, booting = null, channel = null;
+let uid = null, user = null, timer = null, lastJson = "", first = true, status = "";
+
+const sorted = o => Object.keys(o).sort().reduce((a, k) => (a[k] = o[k], a), {});
+const toJson = o => JSON.stringify(sorted(o));
+const mineOnly = o => Object.keys(o).filter(k => !SKIP.includes(k)).reduce((a, k) => (a[k] = o[k], a), {});
+const local = () => mineOnly(S.snapshot());
+const nameOf = u => (u && u.user_metadata && (u.user_metadata.full_name || u.user_metadata.name)) || "";
+
+function paint(state, text) {
+  status = text || status;
+  btn.className = state || (uid ? "on" : "");
+  btn.querySelector(".t").textContent = uid ? (nameOf(user) || user.email || "Akun") : "Masuk";
+  btn.title = uid ? status : "Masuk untuk menyimpan data ke akun";
+  renderPage();
+}
+
+/* ---------- muat SDK hanya saat dibutuhkan ---------- */
+function boot() {
+  if (!configured) return Promise.resolve(false);
+  if (booting) return booting;
+  booting = (async () => {
+    try {
+      const { createClient } = await import(SB_SDK);
+      /* PKCE: login Google kembali lewat ?code=..., sehingga tidak bentrok dengan router #/ milik aplikasi */
+      sb = createClient(cfg.url, cfg.anonKey, { auth: { flowType: "pkce", detectSessionInUrl: true, persistSession: true, autoRefreshToken: true } });
+      sb.auth.onAuthStateChange((event, session) => {
+        /* jangan await panggilan Supabase di dalam callback ini (bisa deadlock) */
+        setTimeout(() => {
+          if (event === "PASSWORD_RECOVERY") { newPassword(); return; }
+          const u = session ? session.user : null;
+          if (u && uid === u.id && event !== "USER_UPDATED") return;      // token refresh: abaikan
+          stopListen();
+          user = u; uid = u ? u.id : null; lastJson = "";
+          setSession(!!u);
+          paint(uid ? "busy" : "", uid ? "Menyinkronkan…" : "");
+          if (uid) listen();
+        }, 0);
+      });
+      return true;
+    } catch (e) {
+      console.error("Supabase gagal dimuat", e); booting = null; paint("err", "Layanan akun gagal dimuat");
+      return false;
+    }
+  })();
+  return booting;
+}
+async function newPassword() {
+  const p = prompt("Masukkan kata sandi baru (minimal 6 karakter):");
+  if (!p) return;
+  const { error } = await sb.auth.updateUser({ password: p });
+  alert(error ? msg(error) : "Kata sandi berhasil diganti.");
+}
+
+/* ---------- kirim ke Postgres (debounce) ---------- */
+async function push() {
+  if (!uid || !sb) return;
+  const data = local(), j = toJson(data);
+  if (j === lastJson) { paint("on", "Tersinkron ✓"); return; }
+  const payload = JSON.stringify(data);
+  if (payload.length > 900000) { paint("err", "Data terlalu besar untuk disimpan"); return; }
+  const { error } = await sb.from(TABLE).upsert({ user_id: uid, json: payload, updated_at: new Date().toISOString() });
+  if (error) { console.error(error); paint("err", "Gagal menyimpan — akan dicoba lagi"); return; }
+  lastJson = j; paint("on", "Tersimpan ✓");
+}
+S.onLocalChange = () => {
+  if (!uid) return;
+  paint("busy", "Menyimpan…");
+  clearTimeout(timer); timer = setTimeout(() => { timer = null; push(); }, PUSH_DELAY);
+};
+const flush = () => { if (uid && timer) { clearTimeout(timer); timer = null; push(); } };
+addEventListener("online", () => { if (uid) push(); });
+addEventListener("pagehide", flush);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") flush(); });
+
+/* ---------- terima dari Postgres (real-time) ---------- */
+function mergeFirst(loc, rem) {
+  const m = Object.assign({}, loc, rem);                       // akun menang…
+  try {                                                        // …kecuali favorit: gabungkan keduanya
+    const a = JSON.parse(loc["seduh.favs"] || "[]"), b = JSON.parse(rem["seduh.favs"] || "[]");
+    if (a.length || b.length) m["seduh.favs"] = JSON.stringify([...new Set([...b, ...a].map(String))]);
+  } catch (e) {}
+  try {                                                        // …skor terbaik Barista Lab: ambil yang tertinggi per beans
+    const a = JSON.parse(loc["seduh.lab"] || "{}").best || {}, b = JSON.parse(rem["seduh.lab"] || "{}").best || {}, best = Object.assign({}, b);
+    Object.keys(a).forEach(k => { best[k] = Math.max(+a[k] || 0, +best[k] || 0); });
+    if (Object.keys(best).length) m["seduh.lab"] = JSON.stringify({ best });
+  } catch (e) {}
+  try {                                                        // …kafe hasil impor: gabungkan berdasarkan nama
+    const a = JSON.parse(loc["seduh.imp"] || "[]"), b = JSON.parse(rem["seduh.imp"] || "[]"), seen = new Set(b.map(r => String(r.name).trim().toLowerCase()));
+    const extra = a.filter(r => !seen.has(String(r.name).trim().toLowerCase()));
+    if (extra.length) m["seduh.imp"] = JSON.stringify(b.concat(extra).slice(-3000));
+  } catch (e) {}
+  return m;
+}
+function applyToLocal(data) {
+  Object.keys(data).forEach(k => { if (!SKIP.includes(k)) S.set(k, data[k]); });
+  Object.keys(local()).forEach(k => { if (!(k in data)) S.remove(k); });
+}
+const parseRow = row => { try { return mineOnly(JSON.parse((row && row.json) || "{}")); } catch (e) { return {}; } };
+function stopListen() { if (channel && sb) { sb.removeChannel(channel); } channel = null; }
+
+async function initialSync(myUid) {
+  const { data: row, error } = await sb.from(TABLE).select("json").eq("user_id", myUid).maybeSingle();
+  if (myUid !== uid) return;                                   // sudah ganti akun / keluar
+  if (error) { console.error(error); paint("err", "Tidak bisa terhubung ke database"); return; }
+  const loc = local(), rem = parseRow(row);
+  const merged = row ? mergeFirst(loc, rem) : loc;
+  const changedHere = toJson(merged) !== toJson(loc);
+  applyToLocal(merged); lastJson = toJson(rem);
+  if (toJson(merged) !== toJson(rem)) await push(); else paint("on", "Tersinkron ✓");
+  if (changedHere) {
+    const k = "seduh.reloadedAt", t = +sessionStorage.getItem(k) || 0;
+    if (Date.now() - t > 8000) { sessionStorage.setItem(k, Date.now()); location.reload(); }
+  }
+}
+function onRemote(row) {
+  const loc = local(), rem = parseRow(row);
+  if (toJson(rem) === toJson(loc)) { lastJson = toJson(rem); paint("on", "Tersinkron ✓"); return; }
+  const changed = new Set([...Object.keys(rem), ...Object.keys(loc)].filter(k => rem[k] !== loc[k]));
+  applyToLocal(rem); lastJson = toJson(rem); paint("on", "Diperbarui dari perangkat lain");
+  if ([...changed].some(k => !QUIET.includes(k))) bar.classList.add("show");
+}
+function listen() {
+  first = true;
+  const me = uid;
+  initialSync(me).then(() => {
+    if (me !== uid) return;
+    channel = sb.channel("ud-" + me)
+      .on("postgres_changes", { event: "*", schema: "public", table: TABLE, filter: "user_id=eq." + me },
+          p => { if (p.new && p.new.json !== undefined) onRemote(p.new); })
+      .subscribe(st => { if (st === "CHANNEL_ERROR") paint("err", "Realtime terputus"); });
+  });
+}
+$("syncReload").onclick = () => location.reload();
+$("syncLater").onclick = () => bar.classList.remove("show");
+
+/* ---------- halaman login (#/login) ---------- */
+function msg(e) {
+  const t = String((e && e.message) || e || "");
+  if (/invalid login credentials/i.test(t)) return "Email atau kata sandi salah.";
+  if (/already registered|already been registered/i.test(t)) return "Email sudah terdaftar — coba Masuk.";
+  if (/at least \d+ char/i.test(t)) return "Kata sandi minimal 6 karakter.";
+  if (/valid email|invalid email|unable to validate email/i.test(t)) return "Format email tidak valid.";
+  if (/email not confirmed/i.test(t)) return "Email belum dikonfirmasi — cek kotak masuk.";
+  if (/rate limit|too many/i.test(t)) return "Terlalu banyak percobaan, coba lagi nanti.";
+  if (/provider is not enabled|unsupported provider/i.test(t)) return "Login Google belum diaktifkan di Supabase (Authentication → Providers).";
+  if (/failed to fetch|network/i.test(t)) return "Koneksi bermasalah.";
+  return t || "Terjadi kesalahan, coba lagi.";
+}
+const say = (t, ok) => { const m = $("acctMsg"); if (m) { m.textContent = t; m.className = "lg-msg" + (ok ? " ok" : ""); } };
+const fOut = $("lgOut"), fIn = $("lgIn"), form = $("lgForm");
+const goHome = () => { location.hash = "#/hub"; };
+let mode = "in";
+
+function setMode(m) {
+  mode = m;
+  $("tabIn").setAttribute("aria-selected", m === "in"); $("tabUp").setAttribute("aria-selected", m === "up");
+  $("goBtn").textContent = m === "in" ? "Masuk" : "Buat akun";
+  $("pw").autocomplete = m === "in" ? "current-password" : "new-password";
+  $("rsBtn").hidden = m !== "in"; say("");
+}
+function renderPage() {
+  $("lgCfg").hidden = configured;
+  fOut.hidden = !!uid; fIn.hidden = !uid;
+  if (uid) { $("lgName").textContent = nameOf(user) || "Tanpa nama"; $("lgMail").textContent = user.email || ""; $("lgStat").textContent = status || "Tersinkron ✓"; }
+}
+/* fn mengembalikan teks jika perlu ditampilkan (mis. "cek email") dan tidak langsung pindah halaman */
+async function run(fn) {
+  if (!configured) return say("Supabase belum dikonfigurasi.");
+  if (!sb) { boot(); return say("Memuat layanan login… coba lagi sebentar.", true); }
+  const bs = [$("gBtn"), $("goBtn")]; bs.forEach(b => b.disabled = true); say("Memproses…", true);
+  try { const note = await fn(); if (note) say(note, true); else { say(""); goHome(); } }
+  catch (e) { say(msg(e)); }
+  bs.forEach(b => b.disabled = false);
+}
+$("tabIn").onclick = () => setMode("in");
+$("tabUp").onclick = () => setMode("up");
+$("gBtn").onclick = () => {
+  if (IN_APP) return say("Login Google tidak jalan di browser dalam aplikasi. Buka halaman ini di Chrome/Safari, atau pakai email.");
+  run(async () => {
+    const { error } = await sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname } });
+    if (error) throw error;
+    return "Mengalihkan ke Google…";
+  });
+};
+form.onsubmit = e => {
+  e.preventDefault();
+  const em = $("em").value.trim(), pw = $("pw").value;
+  run(async () => {
+    if (mode === "in") {
+      const { error } = await sb.auth.signInWithPassword({ email: em, password: pw });
+      if (error) throw error;
+      return "";
+    }
+    const { data, error } = await sb.auth.signUp({ email: em, password: pw, options: { emailRedirectTo: location.origin + location.pathname } });
+    if (error) throw error;
+    return data.session ? "" : "Akun dibuat. Cek email kamu untuk konfirmasi, lalu Masuk.";
+  });
+};
+$("rsBtn").onclick = async () => {
+  if (!configured) return say("Supabase belum dikonfigurasi.");
+  if (!sb) { boot(); return say("Memuat layanan login… coba lagi sebentar.", true); }
+  const e = $("em").value.trim(); if (!e) return say("Isi email dulu.");
+  const { error } = await sb.auth.resetPasswordForEmail(e, { redirectTo: location.origin + location.pathname });
+  error ? say(msg(error)) : say("Tautan reset dikirim ke email.", true);
+};
+$("syncNow").onclick = async () => { await push(); renderPage(); };
+$("outBtn").onclick = async () => {
+  await Promise.race([push(), new Promise(r => setTimeout(r, 2500))]);   // jangan menggantung saat offline
+  stopListen(); S.onLocalChange = null; S.clearAll(); setSession(false);
+  try { await sb.auth.signOut(); } catch (e) { console.error(e); }
+  location.reload();
+};
+btn.onclick = () => { location.hash = "#/login"; };
+setMode("in"); renderPage();
+
+/* ---------- mulai ---------- */
+paint("", "");
+if (!configured) {
+  console.warn("Si SEDUH: isi supabase-config.js untuk mengaktifkan akun & sinkronisasi.");
+} else {
+  /* Tamu tidak mengunduh SDK. Dimuat saat: sudah pernah login di perangkat ini, membuka halaman login, kembali dari login Google (?code=), atau kursor/jari ke tombol akun. */
+  if (hasSession() || location.hash === "#/login" || /[?&]code=/.test(location.search)) boot();
+  addEventListener("hashchange", () => { if (location.hash === "#/login") boot(); });
+  document.addEventListener("pointerover", e => { if (e.target.closest && e.target.closest('#acctBtn, a[href="#/login"]')) boot(); }, { passive: true });
+}
+</script>
+</body>
+</html>
