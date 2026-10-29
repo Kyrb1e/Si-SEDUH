@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Barista Lab</title>
+<link rel="stylesheet" href="lab.css">
+</head>
+<body>
+<header class="hud">
+  <a class="logo hdx" href="#" id="homeLab" aria-label="Barista Lab, kembali ke awal" title="Kembali ke awal"><span class="lg"><span class="gcs" role="img" aria-label="Logo GCS"></span><span class="stm" aria-hidden="true"><i></i><i></i><i></i></span></span><span class="brand"><b>Barista Lab</b><small class="slg">Tarik shot sempurna, satu gram sekali.</small></span></a>
+  <div class="lvb" id="lvn">1</div><div class="rank"><b id="rk">Trainee</b> <span class="meta" id="xpt"></span><div class="xp"><i id="xpb"></i></div></div>
+  <div class="chip">🔥 Streak <b id="stk">0</b></div><button class="chip mus" id="mus" hidden style="display:none" aria-label="Nyalakan atau matikan musik">♪ Musik: mati</button>
+</header>
+
+<main>
+  <section id="select">
+    <div class="hero"><h2>Siapkan bar kamu</h2><p class="sub">Pilih beans, mesin, dan grinder, lalu mulai. Peralatan yang lebih baik membuat gerakan di game lebih lambat dan lebih mudah. Hasil akhir hanya memberi arah koreksi, tanpa angka kunci.</p></div>
+    <div class="step"><i>1</i><h3>Pilih beans</h3><span>Tiap beans punya karakter sendiri</span></div>
+    <div class="grid" id="cards"></div>
+    <div class="step"><i>2</i><h3>Pilih mesin</h3><span>Memengaruhi suhu, channeling, dan laju gerak</span></div>
+    <div class="grid" id="mcards"></div>
+    <div class="step"><i>3</i><h3>Pilih grinder</h3><span>Memengaruhi keseragaman gilingan dan laju gerak</span></div>
+    <div class="grid" id="gcards"></div>
+    <div class="dock"><div class="dk" id="dsum"></div><button class="btn" id="start" disabled>▶ Mulai sesi</button></div>
+  </section>
+
+  <section id="station" class="hidden">
+    <button class="back" id="back">← Ganti beans atau mesin</button>
+    <div class="station">
+      <div class="panel">
+        <div class="say"><span class="av">👨‍🍳</span><p id="say"></p></div><div class="row"><div class="bean" id="bi"></div><div><h3 id="bn" style="margin:0"></h3><div class="meta" id="bs"></div></div></div>
+        <p class="toast" id="bf"></p>
+
+        <div class="prog"><span id="pgt">0 / 6 stasiun siap</span><div class="pgb"><i id="pgi"></i></div></div><div id="games"></div>
+        <div class="tip-box" id="hint"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Mesin espresso <span class="meta" id="mn"></span></h3>
+        <div class="mach" id="mach">
+          <svg class="gauge" width="150" height="86" viewBox="0 0 150 86"><path d="M6 76A69 69 0 0 1 144 76Z" fill="#0a0604" opacity=".65" stroke="#6b5a4a"/><path d="M15 76A60 60 0 0 1 135 76" fill="none" stroke="#4b3626" stroke-width="9" stroke-linecap="round"/><path d="M96 24A60 60 0 0 1 135 76" fill="none" stroke="#8fc06a" stroke-width="9" stroke-linecap="round" opacity=".75"/><g id="tk"></g><line id="nd" x1="75" y1="76" x2="28" y2="76" stroke="#f1e4cf" stroke-width="3" stroke-linecap="round" style="transform-origin:75px 76px;transition:transform .2s"/><circle cx="75" cy="76" r="6" fill="#e9b95f"/><text id="bar" x="75" y="62" text-anchor="middle" fill="#a08c76" font-size="11">0 bar</text></svg>
+          <div class="head"><b class="lcd" id="lcd">0.0 s</b></div><div class="shw"></div><div class="pf"></div><div class="hdl"></div><b class="dp" style="margin-left:-13px"></b><b class="dp" style="margin-left:9px;animation-delay:-.5s"></b>
+          <div class="stream" id="st"><i></i><i></i></div>
+          <div class="cup"><div class="liq" id="lq"></div><div class="cr" id="crm"></div></div><i class="sp"></i><i class="sp"></i><i class="sp"></i>
+        </div>
+        <div class="ro"><div><b id="rt">0.0</b><span>detik</span></div><div><b id="ry">0.0</b><span>yield (g)</span></div><div><b id="rf">0.0</b><span>flow g/s</span></div><div><b id="rr">—</b><span>rasio</span></div></div>
+        <button class="btn" id="go1">MULAI SHOT</button>
+        <button class="btn stop hidden" id="stop">STOP SHOT</button>
+        <p class="toast" id="msg">Selesaikan semua stasiun, lalu mulai shot. Hentikan saat yield pas.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Hasil cupping</h3>
+        <div id="empty" class="meta">Belum ada shot untuk beans ini.</div>
+        <div id="res" class="hidden">
+          <div class="rhead"><div class="rhl"><div class="verdict" id="vd"></div><div class="meta" id="taste"></div></div>
+          <div class="score"><div class="g" id="gr"></div><div><b id="sc"></b><div class="meta" id="xpg"></div><div class="stars2" id="rst"></div></div></div></div>
+          <div class="rcols">
+            <section class="rc"><h4>Profil rasa</h4><svg id="radar" viewBox="0 0 240 205" width="100%" aria-label="Profil rasa"></svg><div class="fl" id="fl"></div><div class="tg" id="tg"></div></section>
+            <section class="rc"><h4>Ekstraksi</h4><div class="rinfo" id="rinfo"></div><details class="info"><summary>Apa itu EY dan TDS?</summary><p><b>EY (Extraction Yield)</b> adalah persentase kopi bubuk yang larut ke dalam minuman. Sekitar 18–22% dianggap seimbang. Di bawahnya terasa asam dan tipis, di atasnya pahit dan kering.</p><p><b>TDS (Total Dissolved Solids)</b> adalah persentase zat terlarut di dalam espresso, yaitu ukuran kepekatannya. Espresso umumnya 8–12%. Keduanya terkait: EY = TDS × berat minuman ÷ berat kopi bubuk.</p></details></section>
+            <section class="rc wide"><h4>Catatan cupper</h4><div class="nar" id="nar"></div><div class="tip-box" id="tip"></div></section>
+            <section class="rc wide"><h4>Panel cupper</h4><div class="jg" id="jg"></div></section>
+            <section class="rc wide"><h4>Rincian variabel</h4><table><thead><tr><th>Variabel</th><th>Kamu</th><th>Penilaian</th></tr></thead><tbody id="key"></tbody></table></section>
+          </div>
+          <div class="acts"><button class="btn ghost" id="again">Coba lagi</button><button class="btn ghost" id="again2">Ganti beans</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="fxo hidden" id="fxo"><canvas id="fxc"></canvas><div class="rays"></div><div class="fxm"><div class="fxt" id="fxt"></div><div class="fg" id="fxg"></div><div class="fxn"><b id="fxn">0</b> / 100</div><div class="fxst" id="fxst"></div><p id="fxs"></p><small class="fxb">Lihat hasil lengkap ▾</small></div></div>
+<script src="lab.js"></script>
+</body>
+</html>
